@@ -6,11 +6,12 @@
     "lint": "eslint --ext .js,.mjs,.jsx .",
     "lint:fix": "eslint --ext .js,.mjs,.jsx . --fix",
     "prepare": "husky install",
-    "watch": "chokidar src -c 'npm run build'"
+    "watch": "chokidar src -c \"npm run build\""
   },
   "dependencies": {
     "@geist-ui/core": "^2.3.8",
     "@primer/octicons-react": "^17.9.0",
+    "browserslist": "^4.22.2",
     "eventsource-parser": "^0.0.5",
     "expiry-map": "^2.0.0",
     "github-markdown-css": "^5.1.0",
