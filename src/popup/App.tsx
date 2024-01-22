@@ -31,7 +31,7 @@ function App() {
     <div className="flex flex-col h-full">
       <div className="mb-2 flex flex-row items-center px-1">
         <img src={logo} className="w-5 h-5 rounded-sm" />
-        <p className="text-sm font-semibold m-0 ml-1">ChatGPT for Google</p>
+        <p className="text-sm font-semibold m-0 ml-1">AudioGPT</p>
         <div className="grow"></div>
         <span className="cursor-pointer leading-[0]" onClick={openOptionsPage}>
           <GearIcon size={16} />
@@ -40,7 +40,7 @@ function App() {
       {isChrome && !hideShortcutsTipQuery.isLoading && !hideShortcutsTipQuery.data && (
         <p className="m-0 mb-2">
           Tip:{' '}
-          <a onClick={openShortcutsPage} className="underline cursor-pointer">
+          <a onClick={openShortcutsPage} className="underline font-bold cursor-pointer">
             setup shortcuts
           </a>{' '}
           for faster access.
@@ -55,7 +55,18 @@ function App() {
           )
         }
         if (accessTokenQuery.data) {
-          return <iframe src="https://chat.openai.com" className="grow border-none" />
+          return (
+            <div className="flex-grow">
+              <iframe
+                src="https://chat.openai.com"
+                className="grow border-none"
+                style={{
+                  transform: 'scale(0.7)',
+                  transformOrigin: 'center',
+                }}
+              />
+            </div>
+          )
         }
         return (
           <div className="grow flex flex-col justify-center">
