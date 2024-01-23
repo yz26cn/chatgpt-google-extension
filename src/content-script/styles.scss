@@ -96,3 +96,32 @@
     }
   }
 }
+
+.gptBtn {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  padding: .6rem;
+  color: var(--light);
+  background: var(--dark);
+  box-shadow: 1px 2px 3px var(--dark-transparent);
+  opacity: 0;
+  border-radius: 5px;
+  pointer-events: none;
+  transition: opacity 100ms ease-in-out;
+
+  .active {
+    pointer-events: all;
+    opacity: 1;
+    transform: scale(1);
+    transition: transition 200ms ease-out, opacity 250ms ease-out;
+
+    .hover {
+      opacity: scale(1.1);
+    }
+  }
+}
+
+.feather_gpt {
+  pointer-events: none;
+}

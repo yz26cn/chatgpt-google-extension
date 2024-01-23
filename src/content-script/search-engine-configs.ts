@@ -7,7 +7,7 @@ export interface SearchEngine {
 
 export const config: Record<string, SearchEngine> = {
   google: {
-    inputQuery: ["input[name='q']"],
+    inputQuery: ['input:focus'],
     sidebarContainerQuery: ['#rhs'],
     appendContainerQuery: ['#rcnt'],
   },
